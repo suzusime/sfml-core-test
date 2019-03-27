@@ -6,4 +6,8 @@
     <RootNamespace>sfml_core_test</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="SFML.Net" Version="2.5.0" />
+  </ItemGroup>
+
 </Project>
