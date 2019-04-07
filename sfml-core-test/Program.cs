@@ -3,6 +3,7 @@ using SFML;
 using SFML.Window;
 using SFML.Graphics;
 using SFML.System;
+using SFML.Audio;
 
 namespace sfml_core_test
 {
@@ -21,6 +22,8 @@ namespace sfml_core_test
             Image image = new Image("zzm_a1zunko32.png");
             Texture texture = new Texture(image);
             Sprite sprite = new Sprite(texture);
+            Music music = new Music("NtP 11 Music Box Gardener.ogg");
+            music.Play();
 
             window.Closed += (sender, e) => window.Close();
             window.TextEntered += (sender, e) =>
