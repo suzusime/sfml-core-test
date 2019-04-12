@@ -11,7 +11,11 @@ namespace sfml_core_test
     {
         static void Main(string[] args)
         {
-            RenderWindow window = new RenderWindow(new VideoMode(1024, 768), "きりたん～");
+            ContextSettings contextSettings = new ContextSettings()
+            {
+                AntialiasingLevel = 16,
+            };
+            RenderWindow window = new RenderWindow(new VideoMode(1024, 768), "きりたん～", Styles.Close, contextSettings);
             Font font = new Font("mplus-2p-light.ttf");
             string textData = "進捗どうですか？";
             Text text = new Text(textData, font, 40);
@@ -22,6 +26,7 @@ namespace sfml_core_test
             Image image = new Image("zzm_a1zunko32.png");
             Texture texture = new Texture(image);
             Sprite sprite = new Sprite(texture);
+            sprite.Scale = new Vector2f(0.5f, 0.5f);
             Music music = new Music("NtP 11 Music Box Gardener.ogg");
             music.Play();
 
